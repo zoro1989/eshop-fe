@@ -5,8 +5,8 @@
     <span class="shop-title">商城管理管理系统</span>
     <el-dropdown class="avatar-container" trigger="click">
       <div class="avatar-wrapper">
-        <!--<img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">-->
-        <img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80" class="user-avatar">
+        <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
+        <!--<img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80" class="user-avatar">-->
         <i class="el-icon-caret-bottom"/>
       </div>
       <el-dropdown-menu slot="dropdown" class="user-dropdown">
@@ -45,9 +45,8 @@ export default {
     },
     logout() {
       this.$store.dispatch('LogOut').then(() => {
-        // location.reload() // 为了重新实例化vue-router对象 避免bug
-        // todo
-        this.$router.push('/login')
+        location.reload() // 为了重新实例化vue-router对象 避免bug
+        // this.$router.push('/login')
       })
     }
   }
