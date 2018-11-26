@@ -1,0 +1,63 @@
+@import "variable.styl"
+
+body, html
+  line-height: 1
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+  background: $color-background
+  color: $color-text
+  font-size: 14px
+  height: 100%
+  box-sizing: border-box
+  .el-button
+    font-size: 12px
+    padding: 6px 15px
+    line-height: 1.5
+  .el-table
+    font-size: 12px
+    th
+      font-weight: 700
+      padding: 5px 0
+    td
+      padding: 4px 0
+  .fixed-width
+    .el-button--mini
+      padding: 6px 10px
+      width: 60px
+      line-height: 1
+  #app
+    height: 100%;
+    //main-container全局样式
+    .app-main
+      min-height: 100%
+    .app-container
+      padding: 20px
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+a,
+a:focus,
+a:hover
+  cursor: pointer
+  color: inherit
+  outline: none
+  text-decoration: none
+
+div:focus
+  outline: none
+
+a:focus,
+a:active
+  outline: none
+
+.clearfix
+  &:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
