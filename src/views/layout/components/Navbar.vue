@@ -16,6 +16,12 @@
           </el-dropdown-item>
         </router-link>
         <el-dropdown-item divided>
+          <span style="display:block;" @click="shopCenter">商城中心</span>
+        </el-dropdown-item>
+        <el-dropdown-item divided>
+          <span style="display:block;" @click="mdPwd">修改密码</span>
+        </el-dropdown-item>
+        <el-dropdown-item divided>
           <span style="display:block;" @click="logout">退出</span>
         </el-dropdown-item>
       </el-dropdown-menu>
@@ -48,6 +54,12 @@ export default {
         location.reload() // 为了重新实例化vue-router对象 避免bug
         // this.$router.push('/login')
       })
+    },
+    mdPwd() {
+      this.$router.push('/shop-center/change-password')
+    },
+    shopCenter() {
+      this.$router.push('/shop-center/index')
     }
   }
 }

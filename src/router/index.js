@@ -30,6 +30,69 @@ export default new Router({
       }]
     },
     {
+      path: '/shop-center',
+      hidden: true,
+      component: Layout,
+      redirect: '/shop-center/index',
+      meta: {title: '商城中心', icon: 'tree'},
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/shop-center/index'),
+          name: 'index',
+          hidden: true,
+          children: [{
+            path: '',
+            name: 'setting',
+            meta: { title: '商城中心' },
+            component: () => import('@/views/shop-center/setting')
+          }, {
+            path: 'online-charge',
+            name: 'online-charge',
+            meta: { title: '在线充值' },
+            component: () => import('@/views/shop-center/online-charge')
+          }, {
+            path: 'charge-record',
+            component: () => import('@/views/shop-center/charge-record'),
+            name: 'charge-record',
+            meta: { title: '充值记录', icon: 'tree', noCache: true }
+          }]
+        },
+        {
+          path: 'change-password',
+          name: 'change-password',
+          meta: { title: '修改密码' },
+          component: () => import('@/views/shop-center/change-password')
+        }
+      ]
+    },
+    {
+      path: '/charge-record',
+      component: Layout,
+      meta: {title: '财务管理', icon: 'tree'},
+      redirect: '/charge-record/index',
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/shop-center/index'),
+          name: 'index',
+          meta: { title: '充值记录', noCache: true },
+          children: [{
+            path: '',
+            component: () => import('@/views/shop-center/charge-record'),
+            name: 'charge-record',
+            meta: { title: '充值记录', noCache: true }
+          }]
+        },
+        {
+          path: 'takeout-list',
+          component: () => import('@/views/finance-manage/takeout-list'),
+          name: 'takeout-list',
+          meta: { title: '外卖账单', noCache: true }
+        }
+      ]
+    },
+    {
       path: '/shop',
       component: Layout,
       redirect: '/shop/list',
