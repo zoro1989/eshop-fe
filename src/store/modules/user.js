@@ -81,14 +81,18 @@ const user = {
         // commit('SET_TOKEN', '')
         // removeToken()
         // resolve()
-        fetch('get', api.userLogout, {}).then((res) => {
-          commit('SET_TOKEN', '')
-          commit('SET_ROLES', [])
-          removeToken()
-          resolve()
-        }).catch((error) => {
-          reject(error)
-        })
+        // fetch('get', api.userLogout, {}).then((res) => {
+        //   commit('SET_TOKEN', '')
+        //   commit('SET_ROLES', [])
+        //   removeToken()
+        //   resolve()
+        // }).catch((error) => {
+        //   reject(error)
+        // })
+        commit('SET_TOKEN', '')
+        commit('SET_ROLES', [])
+        removeToken()
+        resolve()
       })
     },
 
