@@ -8,14 +8,12 @@
             class="search-input"
             placeholder="请输入内容"
             prefix-icon="el-icon-search"
-            size="mini"
             v-model="searchInput">
           </el-input>
         </div>
         <div class="search-line">
           <span>统计时间：</span>
           <el-date-picker
-            size="mini"
             v-model="sumTime"
             type="daterange"
             range-separator="~"
@@ -30,13 +28,12 @@
           <el-radio v-model="type" label="3">初级版</el-radio>
         </div>
         <div class="search-line">
-          <el-button type="primary" size="mini" icon="el-icon-search">搜索</el-button>
-          <el-button type="primary" size="mini" icon="el-icon-download">导出</el-button>
+          <el-button type="primary" icon="el-icon-search">搜索</el-button>
+          <el-button type="primary" icon="el-icon-download">导出</el-button>
         </div>
       </el-col>
     </el-row>
     <el-table
-      size="mini"
       :data="tableData"
       border
       show-summary
@@ -73,8 +70,8 @@
       </el-table-column>
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">充值</el-button>
-          <el-button size="mini" type="success" @click="handleModifyStatus(scope.row,'published')">详情
+          <el-button type="primary" @click="handleUpdate(scope.row)">充值</el-button>
+          <el-button type="success" @click="handleModifyStatus(scope.row,'published')">详情
           </el-button>
         </template>
       </el-table-column>

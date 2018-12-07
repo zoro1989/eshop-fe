@@ -18,7 +18,7 @@
           <el-radio v-model="type" label="3">初级版</el-radio>
         </div>
         <div class="search-line">
-          <el-button type="primary" icon="el-icon-search" size="mini">搜索</el-button>
+          <el-button type="primary" icon="el-icon-search">搜索</el-button>
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="12" class="card-panel-col">
@@ -29,12 +29,11 @@
           <span>可开通初级商家数量：10</span>
         </div>
         <div class="search-line">
-          <el-button type="primary" icon="el-icon-edit" size="mini">添加商家</el-button>
+          <el-button type="primary" icon="el-icon-edit">添加商家</el-button>
         </div>
       </el-col>
     </el-row>
     <el-table
-      size="mini"
       :data="tableData"
       border
       :header-cell-style="{background: '#f5f8fa'}"
@@ -65,13 +64,14 @@
         label="配送费用">
       </el-table-column>
       <el-table-column
+        width="180"
         prop="time"
         label="服务器到期时间">
       </el-table-column>
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">充值</el-button>
-          <el-button size="mini" type="success" @click="handleModifyStatus(scope.row,'published')">详情
+          <el-button type="primary" @click="handleUpdate(scope.row)">充值</el-button>
+          <el-button type="success" @click="handleModifyStatus(scope.row,'published')">详情
           </el-button>
         </template>
       </el-table-column>

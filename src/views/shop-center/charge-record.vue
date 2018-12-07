@@ -17,10 +17,9 @@
       </el-radio-group>
     </div>
     <div class="search-line">
-      <el-button type="primary" size="mini">搜索</el-button>
+      <el-button type="primary">搜索</el-button>
     </div>
     <el-table
-      size="mini"
       :data="tableData"
       border
       :header-cell-style="{background: '#f5f8fa'}"
@@ -51,12 +50,13 @@
       </el-table-column>
       <el-table-column
         prop="time"
+        width="180"
         label="服务器到期时间">
       </el-table-column>
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">充值</el-button>
-          <el-button size="mini" type="success" @click="handleModifyStatus(scope.row,'published')">详情
+          <el-button type="primary" @click="handleUpdate(scope.row)">充值</el-button>
+          <el-button type="success" @click="handleModifyStatus(scope.row,'published')">详情
           </el-button>
         </template>
       </el-table-column>
@@ -68,7 +68,7 @@
       :total="1000">
     </el-pagination>
     <div class="search-line">
-      <el-button type="primary" size="mini">添加活动</el-button>
+      <el-button type="primary">添加活动</el-button>
     </div>
   </div>
 </template>

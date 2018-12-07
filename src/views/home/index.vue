@@ -3,7 +3,6 @@
     <div>
       <span>搜索时间</span>
       <el-date-picker
-        size="mini"
         v-model="searchDateTime"
         type="date"
         value-format="yyyy-MM-dd"
@@ -61,7 +60,6 @@
       <el-date-picker
         v-model="searchAnalyze"
         type="month"
-        size="mini"
         value-format="yyyy-MM"
         placeholder="选择月份">
       </el-date-picker>
