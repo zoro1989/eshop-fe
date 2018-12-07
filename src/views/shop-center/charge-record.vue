@@ -17,13 +17,13 @@
       </el-radio-group>
     </div>
     <div class="search-line">
-      <el-button type="primary">搜索</el-button>
+      <el-button type="primary" size="mini">搜索</el-button>
     </div>
     <el-table
+      size="mini"
       :data="tableData"
       border
       :header-cell-style="{background: '#f5f8fa'}"
-      @selection-change="handleSelectionChange"
       style="width: 100%; margin-top: 20px;">
       <el-table-column
         type="selection"
@@ -68,7 +68,7 @@
       :total="1000">
     </el-pagination>
     <div class="search-line">
-      <el-button type="primary">添加活动</el-button>
+      <el-button type="primary" size="mini">添加活动</el-button>
     </div>
   </div>
 </template>

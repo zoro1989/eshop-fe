@@ -50,10 +50,14 @@ export default {
       this.$store.dispatch('ToggleSideBar')
     },
     logout() {
-      this.$store.dispatch('LogOut').then(() => {
-        location.reload() // 为了重新实例化vue-router对象 避免bug
-        // this.$router.push('/login')
-      })
+      this.$confirm('是否退出当前账号？')
+        .then(_ => {
+          this.$store.dispatch('LogOut').then(() => {
+            location.reload() // 为了重新实例化vue-router对象 避免bug
+            // this.$router.push('/login')
+          })
+        })
+        .catch(_ => {})
     },
     mdPwd() {
       this.$router.push('/shop-center/change-password')

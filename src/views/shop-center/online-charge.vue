@@ -35,7 +35,7 @@
           </span>
         </div>
         <div class="new-line">
-          <el-button type="primary" plain>&lt;返回</el-button>
+          <el-button type="primary" plain size="mini">&lt;返回</el-button>
         </div>
         <div class="new-line">
           <el-checkbox v-model="checked">麒麟技术服务协议</el-checkbox>
@@ -75,7 +75,7 @@
           </span>
         </div>
         <div class="new-line">
-          <el-button type="primary" plain>&lt;返回</el-button>
+          <el-button type="primary" plain size="mini">&lt;返回</el-button>
         </div>
         <div class="new-line">
           <el-checkbox v-model="checked">麒麟技术服务协议</el-checkbox>

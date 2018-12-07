@@ -18,7 +18,7 @@
           <el-radio v-model="type" label="3">初级版</el-radio>
         </div>
         <div class="search-line">
-          <el-button type="primary" icon="el-icon-search">搜索</el-button>
+          <el-button type="primary" icon="el-icon-search" size="mini">搜索</el-button>
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="12" class="card-panel-col">
@@ -29,11 +29,12 @@
           <span>可开通初级商家数量：10</span>
         </div>
         <div class="search-line">
-          <el-button type="primary" icon="el-icon-edit">添加商家</el-button>
+          <el-button type="primary" icon="el-icon-edit" size="mini">添加商家</el-button>
         </div>
       </el-col>
     </el-row>
     <el-table
+      size="mini"
       :data="tableData"
       border
       :header-cell-style="{background: '#f5f8fa'}"

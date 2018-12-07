@@ -34,10 +34,10 @@
         <el-col :xs="12" :sm="12" :lg="4" class="card-panel-col">
           <div class="card-panel-description">
             <div style="margin-bottom: 10px">
-              <el-button type="primary" icon="el-icon-search" @click="onlineCharge">在线充值</el-button>
+              <el-button type="primary" icon="el-icon-search" size="mini" @click="onlineCharge">在线充值</el-button>
             </div>
             <div>
-              <el-button type="primary" icon="el-icon-search">账单记录</el-button>
+              <el-button type="primary" icon="el-icon-search" size="mini">账单记录</el-button>
             </div>
           </div>
         </el-col>

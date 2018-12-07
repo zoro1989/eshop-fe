@@ -15,8 +15,8 @@
           <el-input v-model="form.serviceTel"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary">保存</el-button>
-          <el-button>取消</el-button>
+          <el-button type="primary" size="mini">保存</el-button>
+          <el-button size="mini">取消</el-button>
         </el-form-item>
       </el-form>
     </el-col>
