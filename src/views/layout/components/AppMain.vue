@@ -30,7 +30,11 @@ export default {
 <style rel="stylesheet/stylus" lang="stylus" scoped>
 .app-main
   /*50 = navbar  */
-  min-height: calc(100vh - 50px)
-  position: relative
-  overflow: hidden
+  top: 85px
+  left: 0
+  width: 100%
+  bottom: 0
+  position: absolute
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
 </style>

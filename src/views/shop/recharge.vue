@@ -2,42 +2,16 @@
   <div class="shop-center">
     <el-row class="panel-group">
       <div class="card-panel">
-        <el-col :xs="24" :sm="24" :lg="8" class="card-panel-col">
+        <el-col :xs="2" :sm="2" :lg="2" class="card-panel-col">
           <div class="card-panel-description">
-            <div class="card-panel-text">XXXX商城有限公司</div>
+            <img src="./avatar.png" width="56" height="56"/>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="12" :lg="4" class="card-panel-col">
+        <el-col :xs="12" :sm="12" :lg="12" class="card-panel-col">
           <div class="card-panel-description">
-            <div class="card-panel-text">账户收入</div>
-            <div>
-              <count-to :start-val="0" :end-val="2012" :duration="3200" class="card-panel-num"/>元
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="4" class="card-panel-col">
-          <div class="card-panel-description">
-            <div class="card-panel-text">服务器到期时间</div>
+            <div class="card-panel-text">大队长烧烤（商家名称）</div>
             <div class="expire-date">
-              2020-02-09到期(还有201天)
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="4" class="card-panel-col">
-          <div class="card-panel-description">
-            <div class="card-panel-text">短信剩余数量</div>
-            <div>
-              <count-to :start-val="0" :end-val="191" :duration="3200" class="card-panel-num"/>条
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="4" class="card-panel-col">
-          <div class="card-panel-description">
-            <div style="margin-bottom: 10px">
-              <el-button type="primary" icon="el-icon-search" @click="onlineCharge">在线充值</el-button>
-            </div>
-            <div>
-              <el-button type="primary" icon="el-icon-search">账单记录</el-button>
+              服务器到期时间：2020-02-09（还有402天到期）
             </div>
           </div>
         </el-col>

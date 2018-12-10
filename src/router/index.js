@@ -69,7 +69,7 @@ export default new Router({
     {
       path: '/charge-record',
       component: Layout,
-      meta: {title: '财务管理', icon: 'tree'},
+      meta: {title: '财务管理', icon: 'money'},
       redirect: '/charge-record/index',
       children: [
         {
@@ -95,13 +95,42 @@ export default new Router({
     {
       path: '/shop',
       component: Layout,
+      meta: {title: '商家管理', icon: 'tree'},
       redirect: '/shop/list',
       children: [
+        {
+          path: 'addr',
+          component: () => import('@/views/shop/shop-addr'),
+          name: 'shop-addr',
+          meta: { title: '商家地址', icon: 'map', noCache: true }
+        },
         {
           path: 'list',
           component: () => import('@/views/shop/list'),
           name: 'shop-list',
-          meta: { title: '商家管理', icon: 'tree', noCache: true }
+          meta: { title: '店鋪管理', icon: 'shopping', noCache: true }
+        },
+        {
+          path: 'add',
+          hidden: true,
+          component: () => import('@/views/shop/add-shop'),
+          name: 'shop-add',
+          meta: { title: '商家添加', icon: 'tree', noCache: true, noTagView: true }
+        },
+        {
+          path: 'recharge',
+          component: () => import('@/views/shop/recharge'),
+          name: 'recharge',
+          hidden: true,
+          meta: { title: '充值', icon: 'tree', noCache: true },
+          children: [
+            {
+              path: '',
+              name: 'service',
+              meta: { title: '充值服务器' },
+              component: () => import('@/views/shop/recharge-service')
+            }
+          ]
         }
       ]
     },

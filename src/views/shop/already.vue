@@ -29,7 +29,7 @@
           <span>可开通初级商家数量：10</span>
         </div>
         <div class="search-line">
-          <el-button type="primary" icon="el-icon-edit">添加商家</el-button>
+          <el-button type="primary" icon="el-icon-edit" @click="addShop">添加商家</el-button>
         </div>
       </el-col>
     </el-row>
@@ -70,7 +70,7 @@
       </el-table-column>
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="primary" @click="handleUpdate(scope.row)">充值</el-button>
+          <el-button type="primary" @click="onRecharge(scope.row)">充值</el-button>
           <el-button type="success" @click="handleModifyStatus(scope.row,'published')">详情
           </el-button>
         </template>
@@ -82,6 +82,23 @@
       layout="prev, pager, next"
       :total="1000">
     </el-pagination>
+    <div class="search-line">
+      <el-button type="primary" @click="addActivity">添加活动</el-button>
+    </div>
+    <el-dialog title="添加活动" :visible.sync="dialogFormVisible">
+      <el-form :model="form">
+        <el-form-item label="活动名称" :label-width="formLabelWidth">
+          <el-checkbox-group v-model="checkList">
+            <el-checkbox label="活动1"></el-checkbox>
+            <el-checkbox label="活动2"></el-checkbox>
+            <el-checkbox label="活动3"></el-checkbox>
+          </el-checkbox-group>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="dialogFormVisible = false">关 闭</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 <script>
@@ -118,12 +135,25 @@ export default {
         unitSend: '每单10元',
         pay: '20元',
         time: '2019-02-04(3天后到期)'
-      }]
+      }],
+      form: {},
+      dialogFormVisible: false,
+      formLabelWidth: '120px',
+      checkList: ['活动1']
     }
   },
   methods: {
     handleSelectionChange(val) {
       this.multipleSelection = val
+    },
+    addActivity() {
+      this.dialogFormVisible = true
+    },
+    onRecharge() {
+      this.$router.push('/shop/recharge')
+    },
+    addShop() {
+      this.$router.push('/shop/add')
     }
   }
 }
