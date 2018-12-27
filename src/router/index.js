@@ -196,6 +196,26 @@ export default new Router({
         }
       ]
     },
+    {
+      path: '/settings',
+      component: Layout,
+      redirect: '/settings/business',
+      meta: { title: '设置', icon: 'form', noCache: true },
+      children: [
+        {
+          path: 'business',
+          component: () => import('@/views/settings/business'),
+          name: 'business',
+          meta: { title: '业务设置', icon: 'form', noCache: true }
+        },
+        {
+          path: 'payment',
+          component: () => import('@/views/settings/payment'),
+          name: 'payment',
+          meta: { title: '提成设置', icon: 'form', noCache: true }
+        }
+      ]
+    },
     { path: '*', redirect: '/404', hidden: true }
   ]
 })
