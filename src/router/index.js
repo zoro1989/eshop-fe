@@ -135,15 +135,64 @@ export default new Router({
       ]
     },
     {
+      path: '/opt-manage',
+      component: Layout,
+      redirect: '/opt-manage/carousel',
+      meta: { title: '运营管理', icon: 'form', noCache: true },
+      children: [
+        {
+          path: 'carousel',
+          component: () => import('@/views/opt-manage/carousel'),
+          name: 'carousel',
+          meta: { title: '轮播页管理', icon: 'form', noCache: true }
+        },
+        {
+          path: 'plate',
+          component: () => import('@/views/opt-manage/plate'),
+          name: 'plate',
+          meta: { title: '活动版块管理', icon: 'form', noCache: true }
+        }
+      ]
+    },
+    {
+      path: '/msg-notice',
+      component: Layout,
+      redirect: '/msg-notice/index',
+      meta: { title: '消息公告', icon: 'form', noCache: true },
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/msg-notice/index'),
+          name: 'index',
+          meta: { title: '公告管理', icon: 'form', noCache: true }
+        }
+      ]
+    },
+    {
       path: '/order',
       component: Layout,
       redirect: '/order/list',
+      meta: { title: '订单管理', icon: 'form', noCache: true },
       children: [
         {
           path: 'list',
           component: () => import('@/views/order/list'),
           name: 'order-list',
           meta: { title: '订单列表', icon: 'form', noCache: true }
+        }
+      ]
+    },
+    {
+      path: '/user-manage',
+      component: Layout,
+      redirect: '/user-manage/index',
+      meta: { title: '用户管理', icon: 'form', noCache: true },
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/user-manage/index'),
+          name: 'index',
+          meta: { title: '用户管理', icon: 'form', noCache: true }
         }
       ]
     },
