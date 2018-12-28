@@ -34,10 +34,10 @@
             v-model="form.title">
           </el-input>
         </el-form-item>
-        <div>
+        <el-card>
           <div>当订单金额大于<el-input v-model="form.username" placeholder="请输入" style="width: 100px"></el-input>元</div>
           <div>每单扣取<el-input v-model="form.username" placeholder="请输入" style="width: 100px"></el-input>%信息费，同时扣取<el-input v-model="form.username" placeholder="请输入" style="width: 100px"></el-input>元</div>
-        </div>
+        </el-card>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button type="primary" @click="dialogFormVisible = false">关 闭</el-button>

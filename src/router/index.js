@@ -81,14 +81,14 @@ export default new Router({
             path: '',
             component: () => import('@/views/shop-center/charge-record'),
             name: 'charge-record',
-            meta: { title: '充值记录', noCache: true }
+            meta: { title: '充值记录', icon: 'form', noCache: true }
           }]
         },
         {
           path: 'takeout-list',
           component: () => import('@/views/finance-manage/takeout-list'),
           name: 'takeout-list',
-          meta: { title: '外卖账单', noCache: true }
+          meta: { title: '外卖账单', icon: 'form', noCache: true }
         }
       ]
     },
@@ -138,19 +138,19 @@ export default new Router({
       path: '/opt-manage',
       component: Layout,
       redirect: '/opt-manage/carousel',
-      meta: { title: '运营管理', icon: 'form', noCache: true },
+      meta: { title: '运营管理', icon: 'operator', noCache: true },
       children: [
         {
           path: 'carousel',
           component: () => import('@/views/opt-manage/carousel'),
           name: 'carousel',
-          meta: { title: '轮播页管理', icon: 'form', noCache: true }
+          meta: { title: '轮播页管理', icon: 'carousel', noCache: true }
         },
         {
           path: 'plate',
           component: () => import('@/views/opt-manage/plate'),
           name: 'plate',
-          meta: { title: '活动版块管理', icon: 'form', noCache: true }
+          meta: { title: '活动版块管理', icon: 'activity', noCache: true }
         }
       ]
     },
@@ -164,7 +164,7 @@ export default new Router({
           path: 'index',
           component: () => import('@/views/msg-notice/index'),
           name: 'index',
-          meta: { title: '公告管理', icon: 'form', noCache: true }
+          meta: { title: '公告管理', icon: 'notice', noCache: true }
         }
       ]
     },
@@ -192,7 +192,7 @@ export default new Router({
           path: 'index',
           component: () => import('@/views/user-manage/index'),
           name: 'index',
-          meta: { title: '用户管理', icon: 'form', noCache: true }
+          meta: { title: '用户管理', icon: 'user', noCache: true }
         }
       ]
     },
@@ -200,19 +200,19 @@ export default new Router({
       path: '/settings',
       component: Layout,
       redirect: '/settings/business',
-      meta: { title: '设置', icon: 'form', noCache: true },
+      meta: { title: '设置', icon: 'setting', noCache: true },
       children: [
         {
           path: 'business',
           component: () => import('@/views/settings/business'),
           name: 'business',
-          meta: { title: '业务设置', icon: 'form', noCache: true }
+          meta: { title: '业务设置', icon: 'business', noCache: true }
         },
         {
           path: 'payment',
           component: () => import('@/views/settings/payment'),
           name: 'payment',
-          meta: { title: '提成设置', icon: 'form', noCache: true }
+          meta: { title: '提成设置', icon: 'payment', noCache: true }
         }
       ]
     },

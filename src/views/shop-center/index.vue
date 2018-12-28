@@ -37,7 +37,7 @@
               <el-button type="primary" icon="el-icon-search" @click="onlineCharge">在线充值</el-button>
             </div>
             <div>
-              <el-button type="primary" icon="el-icon-search">账单记录</el-button>
+              <el-button type="primary" icon="el-icon-search" @click="onOrder">账单记录</el-button>
             </div>
           </div>
         </el-col>
@@ -66,6 +66,9 @@ export default {
   methods: {
     onlineCharge() {
       this.$router.push('/shop-center/index/online-charge')
+    },
+    onOrder() {
+      this.$router.push('/charge-record/index')
     }
   }
 }
